@@ -1,6 +1,7 @@
 .direnv/
 result
 result-*
+logs/
 
 .DS_Store
 .env
@@ -9,3 +10,5 @@ result-*
 
 .vscode/
 .idea/
+
+/target

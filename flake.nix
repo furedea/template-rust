@@ -14,9 +14,12 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
+          cargo
+          clippy
           commitlint
           lefthook
-          # Add language toolchain here (uv, pnpm, cargo, go, ...).
+          rustc
+          rustfmt
         ];
       };
     };

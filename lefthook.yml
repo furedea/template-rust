@@ -11,3 +11,8 @@ pre-commit:
     fmt:
       glob: "*.rs"
       run: cargo fmt --check
+
+pre-push:
+  commands:
+    test:
+      run: cargo test

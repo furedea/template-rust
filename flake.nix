@@ -19,6 +19,7 @@
           commitlint
           deadnix
           lefthook
+          ls-lint
           nixfmt-rfc-style
           rustc
           rustfmt

@@ -6,7 +6,7 @@
   };
 
   outputs =
-    { self, nixpkgs }:
+    { nixpkgs }:
     let
       system = "aarch64-darwin";
       pkgs = import nixpkgs { inherit system; };
@@ -17,9 +17,12 @@
           cargo
           clippy
           commitlint
+          deadnix
           lefthook
+          nixfmt-rfc-style
           rustc
           rustfmt
+          statix
         ];
       };
     };

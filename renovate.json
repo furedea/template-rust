@@ -8,6 +8,14 @@
   ],
   "mode": "full",
   "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "description": "Wait for crates.io packages before opening updates.",
+      "matchDatasources": ["crate"],
+      "minimumReleaseAge": "7 days",
+      "internalChecksFilter": "strict"
+    }
+  ],
   "lockFileMaintenance": {
     "enabled": true
   }

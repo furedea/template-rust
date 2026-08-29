@@ -1,5 +1,8 @@
 ls:
   .dir: regex:\.?[a-z0-9]+(-[a-z0-9]+)*
+  .md: regex:[a-z0-9]*([._][a-z0-9]+)* | regex:(README|CONTRIBUTING|CHANGELOG|AGENTS|CLAUDE|SKILL)
+  .toml: regex:[a-z0-9]*([._][a-z0-9]+)* | regex:Cargo
+  .lock: regex:[a-z0-9]*([._][a-z0-9]+)* | regex:Cargo
   .*: regex:[a-z0-9]*([._][a-z0-9]+)*
 
 ignore:
@@ -7,10 +10,7 @@ ignore:
   - .direnv
   - result
   - result-*
+  - "{.venv,.uv-cache,.ruff_cache,.pytest_cache,.ipynb_checkpoints,__pycache__,node_modules,target}"
+  - "**/{.venv,.uv-cache,.ruff_cache,.pytest_cache,.ipynb_checkpoints,__pycache__,node_modules,target}"
   - docs/logs
-
-  - README.md
-  - Cargo.toml
-  - Cargo.lock
-
-  - target
+  - "**/docs/logs"

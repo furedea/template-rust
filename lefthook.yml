@@ -23,3 +23,11 @@ pre-commit:
       run: cargo clippy -- -D warnings
     ls-lint:
       run: ls_lint
+    file-length:
+      glob: "*.rs"
+      run: |
+        for f in {staged_files}; do
+          n=$(wc -l < "$f")
+          [ "$n" -le 500 ] || { echo "$f: $n lines (max 500)"; fail=1; }
+        done
+        exit ${fail:-0}

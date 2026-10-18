@@ -9,3 +9,6 @@ license = "MIT"
 [lints.clippy]
 all = { level = "warn", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
+allow_attributes_without_reason = "warn"
+cognitive_complexity = "warn"
+excessive_nesting = "warn"

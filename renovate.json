@@ -1,34 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "schedule:weekly",
-    ":pinAllExceptPeerDependencies",
-    "helpers:pinGitHubActionDigests"
-  ],
-  "mode": "full",
-  "dependencyDashboard": true,
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "labels": ["security"],
-    "dependencyDashboardApproval": false,
-    "rangeStrategy": "update-lockfile",
-    "prCreation": "immediate",
-    "minimumReleaseAge": null,
-    "vulnerabilityFixStrategy": "lowest"
-  },
-  "packageRules": [
-    {
-      "description": "Wait for crates.io packages before opening updates.",
-      "matchDatasources": ["crate"],
-      "minimumReleaseAge": "7 days",
-      "internalChecksFilter": "strict"
-    }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true
-  },
-  "nix": {
-    "enabled": true
-  }
+  "extends": ["github>furedea/renovate-config"]
 }

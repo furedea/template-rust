@@ -1,11 +1,17 @@
 fn main() {
-    println!("Hello, world!");
+    println!("{}", greeting());
+}
+
+fn greeting() -> &'static str {
+    "Hello, world!"
 }
 
 #[cfg(test)]
 mod tests {
+    use super::greeting;
+
     #[test]
-    fn it_works() {
-        assert!(true);
+    fn greeting_is_hello_world() {
+        assert_eq!(greeting(), "Hello, world!");
     }
 }

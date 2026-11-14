@@ -8,11 +8,18 @@ license = "MIT"
 
 [lints.rust]
 unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+unreachable_pub = "warn"
+missing_docs = "warn"
 
 [lints.clippy]
 all = { level = "warn", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
+allow_attributes = "warn"
 allow_attributes_without_reason = "warn"
+mod_module_files = "warn"
+wildcard_enum_match_arm = "warn"
+iter_over_hash_type = "warn"
 cognitive_complexity = "warn"
 excessive_nesting = "warn"
 dbg_macro = "deny"

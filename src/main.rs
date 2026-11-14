@@ -1,3 +1,5 @@
+//! Template binary that prints a greeting.
+
 fn main() {
     println!("{}", greeting());
 }

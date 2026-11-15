@@ -20,7 +20,7 @@ pre-commit:
       run: cargo fmt --check
     clippy:
       glob: "*.rs"
-      run: cargo clippy -- -D warnings
+      run: cargo clippy --all-targets -- -D warnings
     ls-lint:
       run: ls_lint
     file-length:

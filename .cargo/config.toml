@@ -1,0 +1,4 @@
+# Resolve only crate versions published at least a week ago, matching renovate-config and the
+# uv / pnpm templates. Cargo 1.100 stabilized this key; older Cargo ignores it.
+[registry]
+global-min-publish-age = "7 days"
